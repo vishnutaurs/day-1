@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Portal — Day 4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Student Portal</h1>
+    <nav>
+      <a href="#" class="nav-link active" data-page="home">Home</a>
+      <a href="#" class="nav-link" data-page="register">Register</a>
+      <a href="#" class="nav-link" data-page="students">Students</a>
+      <a href="#" class="nav-link" data-page="about">About</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <h2>Welcome to the Student Portal</h2>
+      <p>Manage student registrations easily with our modern system.</p>
+
+      <div class="lab">
+        <h3>Mini-Activities (DOM + Modules)</h3>
+
+        <div class="controls">
+          <button id="createCardBtn" class="btn btn-outline">Create Card</button>
+          <button id="addProfileBtn" class="btn">Add Profile</button>
+        </div>
+
+        <div id="cardContainer" class="card-grid"></div>
+
+        <div id="mathDemo" class="math-demo"></div>
+      </div>
+    </section>
+
+    <!-- Register Page -->
+    <section id="register" class="page">
+      <h2>Student Registration</h2>
+      <form id="regForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="e.g., Priya K"/>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="e.g., priya@mail.com"/>
+
+        <label for="course">Course</label>
+        <input type="text" id="course" required placeholder="e.g., B.E CSE"/>
+
+        <label for="year">Year</label>
+        <select id="year" required>
+          <option value="">Select Year</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </section>
+
+    <!-- Students Page -->
+    <section id="students" class="page">
+      <h2>Registered Students</h2>
+      <input type="text" id="search" placeholder="Search by name..." />
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Year</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="studentList"></tbody>
+      </table>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page">
+      <h2>About</h2>
+      <p>
+        This student portal demonstrates DOM manipulation and ES6 Modules.
+        Cards are created dynamically and student data is stored in your browser (localStorage).
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Portal. All Rights Reserved.</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
